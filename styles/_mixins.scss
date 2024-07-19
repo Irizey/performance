@@ -1,0 +1,11 @@
+@use "variables" as v;
+
+@mixin d-flex($just: center, $alin: center, $fd: row, $fw: nowrap, $cg: 0, $rg: 0) {
+  display: flex;
+  justify-content: $just;
+  align-items: $alin;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  column-gap: $cg;
+  row-gap: $rg;
+}

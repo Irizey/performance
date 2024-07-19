@@ -1,0 +1,7 @@
+@use "variables" as v;
+
+%hover-black-icon {
+  &:hover {
+    fill: v.$color_white-d;
+  }
+}
