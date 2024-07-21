@@ -1,5 +1,5 @@
 @use "variables" as v;
-
+@use "mixins" as m;
 
 @font-face {
   font-family: 'Roboto' ;
@@ -45,8 +45,10 @@
 }
 
 body {
+  @include m.d-flex(center, center, row, wrap );
   font-family: "Roboto", sans-serif;
   background-color: v.$blue_color;
+
 }
 
 
