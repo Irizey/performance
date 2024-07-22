@@ -48,10 +48,12 @@ body {
   @include m.d-flex(center, center, row, wrap );
   font-family: "Roboto", sans-serif;
   background-color: v.$blue_color;
-
 }
 
-
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 a {
   text-decoration: none;
