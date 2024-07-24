@@ -45,7 +45,7 @@
 }
 
 body {
-  @include m.d-flex(center, center, row, wrap );
+  //@include m.d-flex(center, center, row, wrap );
   font-family: "Roboto", sans-serif;
   background-color: v.$blue_color;
 }
@@ -58,4 +58,9 @@ body {
 a {
   text-decoration: none;
   color: unset;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
 }
