@@ -170,7 +170,7 @@
   }
 
   &__scroll {
-    @include m.position(absolute, 1, -1, bottom, left, 100px, -100px);
+    @include m.position(absolute, 1, -1, bottom, left, 100px, 10px);
 
     &-content {
       position: relative;
