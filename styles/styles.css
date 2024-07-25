@@ -599,6 +599,76 @@ hr {
   }
 }
 
+.img-card {
+  position: relative;
+  width: 325px;
+  height: 295px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  column-gap: 0;
+  row-gap: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img-card__title {
+  font-size: 23px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  column-gap: 0;
+  row-gap: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.img-card__preview {
+  width: 100%;
+  height: 220px;
+}
+.img-card__btn {
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  left: -30px;
+  width: 120px;
+  height: 90px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  rotate: 7deg;
+  transition: rotate 0.2s;
+}
+.img-card__btn-icon {
+  width: 36px;
+  height: 23px;
+  fill: #000000;
+  rotate: -7deg;
+  translate: 12px -3px;
+}
+.img-card__btn:hover {
+  scale: 1.3;
+}
+.img-card__btn:hover .img-card__btn-icon {
+  translate: 17px -8px;
+}
+.img-card:hover {
+  box-shadow: 0 8px 20px 12px rgba(0, 0, 0, 0.15), inset 0 -5px 70px 25px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 428px) {
+  .img-card {
+    width: 300px;
+  }
+}
+
 .work-section {
   padding: 0 20px 180px;
 }
@@ -847,7 +917,7 @@ hr {
     background: url("../images/telephone.webp") -170px 0/125% no-repeat;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 428px) {
   .about-section .about__touch {
     height: 350px;
   }
@@ -914,6 +984,44 @@ hr {
   .about-section .about__approach-title {
     margin: 0;
   }
+}
+
+.experience {
+  padding: 180px 0;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  column-gap: 0;
+  row-gap: 90px;
+}
+.experience__title {
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .experience__title {
+    font-size: 45px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+}
+.experience__cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 55px;
+  width: 100%;
+  padding: 0 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
