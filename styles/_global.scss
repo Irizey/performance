@@ -60,7 +60,15 @@ a {
   color: unset;
 }
 
+figure, blockquote {
+  margin: 0;
+}
+
 hr {
   margin: 0;
   width: 100%;
+}
+
+p {
+  margin: 0;
 }
