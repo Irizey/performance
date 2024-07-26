@@ -112,15 +112,15 @@
     width: 500px;
     height: 275px;
     background: url("../icons/bg.svg") center / contain no-repeat;
-    @include m.d-flex(start, start, column, nowrap, 0, 35px);
+    @include m.d-flex(start, start, column, nowrap, 0, 25px);
 
     &__avatar {
-      margin: 25px 0 0 30px;
+      margin: 45px 0 0 50px;
     }
 
     &__quote {
       @include m.font(20px, 400, v.$color_white);
-      margin: 0 30px;
+      margin: 0 50px;
       line-height: 1.4;
     }
     
@@ -129,7 +129,12 @@
       row-gap: 15px;
       background: url("../icons/bg.svg") 50% 0 / contain no-repeat;
 
+      &__avatar {
+        margin: 25px 0 0 30px;
+      }
+
       &__quote {
+        margin: 0 20px;
         @include m.font(13px, 400, v.$color_white);
       }
     }
