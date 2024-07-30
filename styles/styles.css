@@ -597,7 +597,7 @@ p {
 .hero__scroll {
   position: absolute;
   z-index: 1;
-  bottom: 100px;
+  bottom: 150px;
   left: 10px;
 }
 .hero__scroll-content {
@@ -624,7 +624,7 @@ p {
     position: absolute;
     z-index: 1;
     bottom: 150px;
-    left: -30px;
+    left: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -632,7 +632,7 @@ p {
     position: absolute;
     z-index: 1;
     bottom: 350px;
-    left: -20px;
+    left: 20px;
   }
 }
 @media (max-width: 610px) {
@@ -699,6 +699,7 @@ p {
 .info-card:hover {
   color: #fff;
   background-color: rgba(14, 14, 14, 0.45);
+  box-shadow: 0 8px 20px 12px rgba(0, 0, 0, 0.15), inset 0 -5px 70px 25px rgba(0, 0, 0, 0.2);
 }
 .info-card:hover .info-card__title {
   color: #fff;
