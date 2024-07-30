@@ -2,107 +2,171 @@
 @use "mixins" as m;
 @use "placeholdres";
 
-//.container {
-//  max-width: 100%;
-//}
-
-.header {
-  min-width: 100%;
-  height: 50px;
-  background-color: v.$color_white10;
-  border-bottom: 1px solid v.$color_white;
 
 
-
-  .nav {
+  .header {
+    min-width: 100%;
     height: 50px;
-    @include m.d-flex(start, center);
+    background-color: v.$color_white10;
+    border-bottom: 1px solid v.$color_white;
 
-    &__title {
-      height: 100%;
-      width: 255px;
-      border-right: 1px solid v.$color_white;
-      @include m.d-flex(center, center);
+    .nav {
+      height: 50px;
+      @include m.d-flex(start, center);
 
-      &-link {
-        font-size: 25px;
-        font-weight: 500;
-        color:  v.$color_white;
+      &__title {
+        height: 100%;
+        width: 255px;
+        border-right: 1px solid v.$color_white;
+        @include m.d-flex(center, center);
 
-        span {
-          font-weight: 700;
-        }
+        &-link {
+          font-size: 25px;
+          font-weight: 500;
+          color:  v.$color_white;
 
-        &:hover {
-          color: v.$color_white-d;
+          span {
+            font-weight: 700;
+          }
+
+          &:hover {
+            color: v.$color_white-d;
+          }
         }
       }
-    }
 
-    &__links {
-      flex-grow: 1;
+      &__links {
+        flex-grow: 1;
 
-      .list {
-        @include m.d-flex(start, center, row, nowrap,min( 100px, 5vw), 0);
-        padding: 0 0 0 min( 100px, 5vw);
+        .list {
+          @include m.d-flex(start, center, row, nowrap,min( 100px, 5vw), 0);
+          padding: 0 0 0 min( 100px, 5vw);
 
-        &__item {
-          &-link {
-            font-size: 22px;
-            font-weight: 400;
-            color: v.$color_white;
+          &__item {
+            &-link {
+              font-size: 22px;
+              font-weight: 400;
+              color: v.$color_white;
 
-            &:hover {
-              color: v.$color_white-d;
+              &:hover {
+                color: v.$color_white-d;
+              }
             }
           }
         }
-      }
-      @media (max-width: v.$media_lg) {
-        .list {
-          @include m.d-flex(center, center, row, nowrap,min( 100px, 5vw));
-          padding: 0 0 0 0;
-        }
-      }
-    }
-
-    .covid {
-      height: 100%;
-      @include m.d-flex(center, center);
-      padding: 0 30px;
-
-      border: {
-        left: 1px solid v.$color_white;
-        right: 1px solid v.$color_white;
-      }
-
-      &__link {
-        font-size: 16px;
-        font-weight: 700;
-        color: v.$color_white;
-
-        &:hover {
-          color: v.$color_white-d;
-        }
-      }
-    }
-
-    .globe {
-      width: 90px;
-      @include m.d-flex(center, center);
-
-      &__link {
-        &-icon {
-          width: 27px;
-          height: 28px;
-          fill: v.$color_white;
-
-          @extend %hover-black-icon;
+        @media (max-width: v.$media_lg) {
+          .list {
+            @include m.d-flex(center, center, row, nowrap,min( 100px, 5vw));
+            padding: 0 0 0 0;
           }
         }
       }
+
+      .covid {
+        height: 100%;
+        @include m.d-flex(center, center);
+        padding: 0 30px;
+
+        border: {
+          left: 1px solid v.$color_white;
+          right: 1px solid v.$color_white;
+        }
+
+        &__link {
+          font-size: 16px;
+          font-weight: 700;
+          color: v.$color_white;
+
+          &:hover {
+            color: v.$color_white-d;
+          }
+        }
+      }
+
+      .globe {
+        width: 90px;
+        @include m.d-flex(center, center);
+
+        &__link {
+          &-icon {
+            width: 27px;
+            height: 28px;
+            fill: v.$color_white;
+            @extend %hover-black-icon;
+          }
+        }
+      }
+
+      @media (max-width: v.$media_md) {
+        &__links,
+        .covid,
+        .globe {
+          display: none;
+        }
+      }
+    }
+  }
+
+                  /*Burger*/
+  .mobile-navigation {
+    display: none;
+
+    &__burger {
+      @include m.position(absolute, 1, -1, top, right, 13px, 20px);
+
+      &-icon {
+        width: 33px;
+        height: 22px;
+        color: v.$color_white;
+        @extend %hover-black-i;
+      }
     }
 
+    &__toggle {
+      display: none;
+
+      &:checked + .nav {
+        translate: 0;
+      }
+    }
+    .nav {
+      padding: 100px 70px 0;
+      @include m.position(fixed, 5, 0);
+      background-color: v.$color_white-d;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      translate: 100% 0;
+      transition: translate .22s;
+
+      &__list {
+        @include m.d-flex(start, start, column, nowrap, 0, 20px);
+
+        &-item {
+          &-link {
+            @include m.font(36px, 400, v.$color_white);
+            text-shadow: 2px 2px 5px rgba(0,0,3);
+          }
+        }
+      }
+      &__close {
+        @include m.position(absolute, 10, -1, top, right, 13px, 20px);
+
+        &-icon {
+          width: 30px;
+          height: 30px;
+          color: v.$color_white;
+          @extend %hover-black-i;
+        }
+      }
+    }
+
+
+
+
+
+    @media (max-width: v.$media_md) {
+      display: block;
+    }
   }
 
 

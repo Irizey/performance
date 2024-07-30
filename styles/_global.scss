@@ -44,6 +44,10 @@
     font-display: swap;
 }
 
+html  {
+  scroll-behavior: smooth;
+}
+
 body {
   //@include m.d-flex(center, center, row, wrap );
   font-family: "Roboto", sans-serif;
