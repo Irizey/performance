@@ -179,6 +179,11 @@ a {
 .header .nav__title-link:hover {
   color: rgba(14, 14, 14, 0.45);
 }
+@media (max-width: 410px) {
+  .header .nav__title-link {
+    font-size: 20px;
+  }
+}
 .header .nav__links {
   flex-grow: 1;
 }
@@ -287,7 +292,7 @@ a {
   position: absolute;
   z-index: 1;
   bottom: 15px;
-  right: 0;
+  right: 10px;
 }
 .hero__content .hero__action-btn:hover {
   background-color: rgba(14, 14, 14, 0.45);
@@ -340,13 +345,28 @@ a {
     color: #000000;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .hero__content .hero__title {
     padding-left: 30px;
     font-size: 50px;
     font-weight: 700;
     font-style: normal;
     color: #000000;
+  }
+}
+@media (max-width: 410px) {
+  .hero__content .hero__title {
+    padding-left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+  }
+  .hero__content .hero__action-btn {
+    position: absolute;
+    z-index: 1;
+    bottom: 65px;
+    right: 15px;
   }
 }
 .hero__notify {
@@ -478,7 +498,7 @@ a {
 @media (max-width: 500px) {
   .hero__notify {
     width: 100%;
-    max-width: 350px;
+    max-width: 340px;
     margin: 100px auto 0;
     height: fit-content;
   }
@@ -508,34 +528,48 @@ a {
   top: 100px;
   left: 10px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .hero__scroll {
     position: absolute;
     z-index: 1;
-    bottom: 200px;
-    left: -20px;
+    bottom: 150px;
+    left: -30px;
   }
 }
-@media (max-width: 630px) {
-  .hero__scroll {
-    position: absolute;
-    z-index: 1;
-    bottom: 200px;
-    left: 20px;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .hero__scroll {
     position: absolute;
     z-index: 1;
     bottom: 350px;
-    left: 30px;
+    left: -20px;
+  }
+}
+@media (max-width: 610px) {
+  .hero__scroll {
+    position: absolute;
+    z-index: 1;
+    bottom: 350px;
+    left: 10px;
+  }
+}
+@media (max-width: 410px) {
+  .hero__scroll {
+    position: absolute;
+    z-index: 1;
+    bottom: 400px;
+    left: 10px;
   }
 }
 @media (max-width: 768px) {
   .hero {
     padding: 110px 0;
     background: url("../images/cloud-alpha.png") 0 40%/contain no-repeat;
+  }
+}
+@media (max-width: 410px) {
+  .hero {
+    padding: 100px 0;
+    background: url("../images/cloud-alpha.png") 0 30%/contain no-repeat;
   }
 }
 

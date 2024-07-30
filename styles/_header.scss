@@ -37,6 +37,11 @@
           color: v.$color_white-d;
         }
       }
+      @media (max-width: 410px) {
+        &-link {
+          font-size: 20px;
+        }
+      }
     }
 
     &__links {
