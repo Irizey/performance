@@ -23,7 +23,7 @@
         &-link {
           font-size: 25px;
           font-weight: 500;
-          color:  v.$color_white;
+          color: v.$color_white;
 
           span {
             font-weight: 700;
@@ -35,12 +35,19 @@
         }
       }
 
+      @media (max-width: 410px) {
+        &-link {
+          font-size: 20px;
+        }
+      }
+
+
       &__links {
         flex-grow: 1;
 
         .list {
-          @include m.d-flex(start, center, row, nowrap,min( 100px, 5vw), 0);
-          padding: 0 0 0 min( 100px, 5vw);
+          @include m.d-flex(start, center, row, nowrap, min(100px, 5vw), 0);
+          padding: 0 0 0 min(100px, 5vw);
 
           &__item {
             &-link {
@@ -54,9 +61,10 @@
             }
           }
         }
+
         @media (max-width: v.$media_lg) {
           .list {
-            @include m.d-flex(center, center, row, nowrap,min( 100px, 5vw));
+            @include m.d-flex(center, center, row, nowrap, min(100px, 5vw));
             padding: 0 0 0 0;
           }
         }
@@ -106,6 +114,7 @@
       }
     }
   }
+
 
                   /*Burger*/
   .mobile-navigation {
