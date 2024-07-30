@@ -699,6 +699,7 @@ p {
 .info-card:hover {
   color: #fff;
   background-color: rgba(14, 14, 14, 0.45);
+  box-shadow: 0 8px 20px 12px rgba(0, 0, 0, 0.15), inset 0 -5px 70px 25px rgba(0, 0, 0, 0.2);
 }
 .info-card:hover .info-card__title {
   color: #fff;
