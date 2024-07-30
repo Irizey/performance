@@ -199,7 +199,7 @@ p {
   color: rgba(14, 14, 14, 0.45);
 }
 @media (max-width: 410px) {
-  .header .nav__title-link {
+  .header .nav-link {
     font-size: 20px;
   }
 }
