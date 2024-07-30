@@ -5,3 +5,15 @@
     fill: v.$color_white-d;
   }
 }
+
+%hover-black-a {
+  &:hover {
+    color: v.$color_white-d;
+  }
+}
+
+%hover-black-i {
+  &:hover {
+    color: v.$color_white-d;
+  }
+}

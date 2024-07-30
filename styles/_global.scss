@@ -44,16 +44,35 @@
     font-display: swap;
 }
 
-body {
-  @include m.d-flex(center, center, row, wrap );
-  font-family: "Roboto", sans-serif;
-  background-color: v.$blue_color;
-
+html  {
+  scroll-behavior: smooth;
 }
 
+body {
+  //@include m.d-flex(center, center, row, wrap );
+  font-family: "Roboto", sans-serif;
+  background-color: v.$blue_color;
+}
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 a {
   text-decoration: none;
   color: unset;
+}
+
+figure, blockquote {
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+  width: 100%;
+}
+
+p {
+  margin: 0;
 }
